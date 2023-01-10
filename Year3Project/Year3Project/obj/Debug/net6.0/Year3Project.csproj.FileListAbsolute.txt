@@ -1,0 +1,15 @@
+C:\Users\Computing\Documents\Year3Project\Year3Project\bin\Debug\net6.0\Year3Project.exe
+C:\Users\Computing\Documents\Year3Project\Year3Project\bin\Debug\net6.0\Year3Project.deps.json
+C:\Users\Computing\Documents\Year3Project\Year3Project\bin\Debug\net6.0\Year3Project.runtimeconfig.json
+C:\Users\Computing\Documents\Year3Project\Year3Project\bin\Debug\net6.0\Year3Project.dll
+C:\Users\Computing\Documents\Year3Project\Year3Project\bin\Debug\net6.0\Year3Project.pdb
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\Year3Project.csproj.AssemblyReference.cache
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\Year3Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\Year3Project.AssemblyInfoInputs.cache
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\Year3Project.AssemblyInfo.cs
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\Year3Project.csproj.CoreCompileInputs.cache
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\Year3Project.dll
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\refint\Year3Project.dll
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\Year3Project.pdb
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\Year3Project.genruntimeconfig.cache
+C:\Users\Computing\Documents\Year3Project\Year3Project\obj\Debug\net6.0\ref\Year3Project.dll
