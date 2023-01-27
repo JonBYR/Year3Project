@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Computing\\Documents\\Year3Project\\Year3Project\\Year3Project.csproj": {}
+    "C:\\Users\\Computing\\Documents\\GitHub\\Year3Project\\Year3Project\\Year3Project\\Year3Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Computing\\Documents\\Year3Project\\Year3Project\\Year3Project.csproj": {
+    "C:\\Users\\Computing\\Documents\\GitHub\\Year3Project\\Year3Project\\Year3Project\\Year3Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Computing\\Documents\\Year3Project\\Year3Project\\Year3Project.csproj",
+        "projectUniqueName": "C:\\Users\\Computing\\Documents\\GitHub\\Year3Project\\Year3Project\\Year3Project\\Year3Project.csproj",
         "projectName": "Year3Project",
-        "projectPath": "C:\\Users\\Computing\\Documents\\Year3Project\\Year3Project\\Year3Project.csproj",
+        "projectPath": "C:\\Users\\Computing\\Documents\\GitHub\\Year3Project\\Year3Project\\Year3Project\\Year3Project.csproj",
         "packagesPath": "C:\\Users\\Computing\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Computing\\Documents\\Year3Project\\Year3Project\\obj\\",
+        "outputPath": "C:\\Users\\Computing\\Documents\\GitHub\\Year3Project\\Year3Project\\Year3Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

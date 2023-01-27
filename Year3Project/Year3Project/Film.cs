@@ -44,6 +44,12 @@ namespace Year3Project
         {
             List<Film> matchingFilms = new List<Film>();
             List<string> output = new List<string>();
+            List<string> genres = new List<string>();
+            for (int i = 0; i < films.Count; i++)
+            {
+                genres.Add(films[i].getGenre());
+            }
+            if (genres.Contains(input) != true) throw new InvalidGenre(input);
             for (int i = 0; i < films.Count; i++)
             {
                 if (input == films[i].getGenre()) matchingFilms.Add(films[i]);

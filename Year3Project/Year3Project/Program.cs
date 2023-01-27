@@ -41,10 +41,17 @@ namespace Year3Project
             goodBadUgly.Add(goodBadUglyShots);
             List<Film> trainFilms = new List<Film> { Zulu, Memento, johnWick, grossePointBlank, marathonMan, libertyVallance, djangoUnchained, budapestHotel, reserviorDogs, goodBadUgly };
             string inputGenre;
-            Console.WriteLine("Please input the type of genre you wish to test ");
-            inputGenre = Console.ReadLine();
-            List<string> resultantShots = Film.outputShots(inputGenre, trainFilms);
-            resultantShots.ForEach(Console.WriteLine);
+            try
+            {
+                Console.WriteLine("Please input the type of genre you wish to test: Western, Action, Thriller or Comedy");
+                inputGenre = Console.ReadLine();
+                List<string> resultantShots = Film.outputShots(inputGenre, trainFilms);
+                resultantShots.ForEach(Console.WriteLine);
+            }
+            catch (InvalidGenre g)
+            {
+                Console.WriteLine(g.Message);
+            }
         }
 
     }
