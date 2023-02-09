@@ -46,6 +46,7 @@ namespace Year3Project
                 Console.WriteLine("Please input the type of genre you wish to test: Western, Action, Thriller or Comedy");
                 inputGenre = Console.ReadLine();
                 List<string> resultantShots = Film.outputShots(inputGenre, trainFilms);
+                Console.WriteLine("Final shot sequence should therefore follow this guideline: ");
                 resultantShots.ForEach(Console.WriteLine);
             }
             catch (InvalidGenre g)
