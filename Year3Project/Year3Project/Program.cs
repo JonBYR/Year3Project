@@ -2,7 +2,7 @@
 using Year3Project;
 using System;
 using System.Linq;
-
+using System.Threading;
 namespace Year3Project
 {
     internal class Program
@@ -32,7 +32,11 @@ namespace Year3Project
                 List<string> resultantShots = Film.outputShots(inputGenre, trainFilms);
                 Console.WriteLine("Final shot sequence should therefore follow this guideline: ");
                 resultantShots.ForEach(Console.WriteLine);
-                Film.imageOutput(inputGenre, resultantShots[0]);
+                for (int i = 0; i < resultantShots.Count; i++) 
+                {
+                    Film.imageOutput(inputGenre, resultantShots[i]);
+                }
+                
             }
             catch (InvalidGenre g)
             {

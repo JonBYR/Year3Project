@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using SkiaSharp;
 using System.Drawing;
+using System.Diagnostics;
+using System.Threading;
+
 namespace Year3Project
 {
     internal class Film
@@ -86,14 +89,12 @@ namespace Year3Project
         {
             string fileName = shot + ".png";
             string imagePath = Path.Combine(genre, fileName);
-            Point location = new Point(10, 10);
-            Size imageSize = new Size(20, 10);
-            var image = SKImage.FromEncodedData(imagePath);
-            var bm = SKBitmap.FromImage(image);
-            var surface = SKSurface.Create(image.Info);
-            SKCanvas canvas = surface.Canvas;
-            SKPoint point = new SKPoint(0, 0);
-            canvas.DrawBitmap(bm, point);
+            var process = new Process();
+            process.StartInfo = new ProcessStartInfo(imagePath)
+            { UseShellExecute = true };
+            process.Start();
+            Thread.Sleep(1000);
+            process.Close();
         }
     }
 }
