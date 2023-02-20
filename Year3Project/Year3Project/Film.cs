@@ -80,6 +80,14 @@ namespace Year3Project
 
             }
             return output;
+        } //https://stackoverflow.com/questions/7470689/how-to-check-if-filename-contains-substring-in-c-sharp
+        public static void imageOutput(string genre, string shot)
+        {
+            bool contains = Directory.EnumerateFiles(genre).Any(f => f.Contains(shot));
+            if (contains)
+            {
+                Console.WriteLine("Genre found");
+            }
         }
     }
 }

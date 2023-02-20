@@ -32,6 +32,7 @@ namespace Year3Project
                 List<string> resultantShots = Film.outputShots(inputGenre, trainFilms);
                 Console.WriteLine("Final shot sequence should therefore follow this guideline: ");
                 resultantShots.ForEach(Console.WriteLine);
+                Film.imageOutput(inputGenre, resultantShots[0]);
             }
             catch (InvalidGenre g)
             {
