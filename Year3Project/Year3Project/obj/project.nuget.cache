@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "g28ho2J8A0J3tY1sReWlwLvXCBY998dAlGuuetstMZd0gKbGNmEeABzpnsUzDBmcWCdGi+8nqguziSseDkJRAg==",
+  "dgSpecHash": "xdJSzPh7Q4/pbXpg9v789p2pynTvBnD0w/gCyG0gIqzC+Git99wDzLOJXb3yvf32lNhNMQYyXN+ld05s4gjz6g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Computing\\Documents\\GitHub\\Year3Project\\Year3Project\\Year3Project\\Year3Project.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Computing\\.nuget\\packages\\skiasharp\\2.88.3\\skiasharp.2.88.3.nupkg.sha512",
+    "C:\\Users\\Computing\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.3\\skiasharp.nativeassets.macos.2.88.3.nupkg.sha512",
+    "C:\\Users\\Computing\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.3\\skiasharp.nativeassets.win32.2.88.3.nupkg.sha512"
+  ],
   "logs": []
 }
