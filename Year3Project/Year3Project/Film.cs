@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SkiaSharp;
-using System.Drawing;
 using System.Diagnostics;
 using System.Threading;
 
@@ -12,6 +10,9 @@ namespace Year3Project
 {
     internal class Film
     {
+        public int MyProperty { get; set; }
+
+
         private string genre;
         private List<string> shots;
         public Film(string g)
