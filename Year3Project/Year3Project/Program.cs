@@ -3,6 +3,9 @@ using Year3Project;
 using System;
 using System.Linq;
 using System.Threading;
+using Year3Project.Model;
+using Year3Project.Controller;
+
 namespace Year3Project
 {
     internal class Program
@@ -10,38 +13,19 @@ namespace Year3Project
         static void Main(string[] args)
         {
             string[] filme = File.ReadAllLines("Films.txt");
-            List<Film> trainFilms = new List<Film>();
-            foreach(string line in filme)
-            {
-                Film lineFilm = new Film(line.Substring(0, line.IndexOf(':')).Trim());
-                string commas = line.Substring(line.IndexOf(':') + 1);
-                string[] commasList = commas.Split(',');
-                List<string> lineShots = new List<string>();
-                for (int i = 0; i < commasList.Length; i++)
-                {
-                    lineShots.Add(commasList[i].Trim());
-                }
-                lineFilm.Add(lineShots);
-                trainFilms.Add(lineFilm);
-            }
-            string inputGenre;
-            try
-            {
-                Console.WriteLine("Please input the type of genre you wish to test: Western, Action, Thriller or Comedy");
-                inputGenre = Console.ReadLine();
-                List<string> resultantShots = Film.outputShots(inputGenre, trainFilms);
-                Console.WriteLine("Final shot sequence should therefore follow this guideline: ");
-                resultantShots.ForEach(Console.WriteLine);
-                for (int i = 0; i < resultantShots.Count; i++) 
-                {
-                    Film.imageOutput(inputGenre, resultantShots[i]);
-                }
-                
-            }
-            catch (InvalidGenre g)
-            {
-                Console.WriteLine(g.Message);
-            }
+            FilmController filmController = new FilmController(Film.FilmObjectsFromDatafile(filme));
+            
+            // Store what they want for later.
+            Console.WriteLine("Please input the type of genre you wish to test: Western, Action, Thriller or Comedy");
+            string inputGenre = Console.ReadLine();
+            
+            filmController.GetOutputShotsFromGenre(inputGenre);
+            filmController.GetMostCommonShots();
+            filmController.MatchShotLibraryShotToFilmShot();
+            filmController.SerializeFilm();
+
+
+            Console.WriteLine("Hi");
         }
 
     }
