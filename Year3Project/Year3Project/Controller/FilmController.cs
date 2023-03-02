@@ -79,7 +79,7 @@ namespace Year3Project.Controller
         {
             foreach (string shot in outputFilm.shots)
             {
-                string shotPng = $"{shot}.png";
+                string shotPng = $"{shot}";
                 outputFilm.shotPaths.Add(Path.Combine(outputFilm.genre, shotPng));
             }
         }
@@ -87,7 +87,7 @@ namespace Year3Project.Controller
         // Create a json object.
         public void SerializeFilm()
         {
-            using(StreamWriter jsonWriter = new StreamWriter("Film.json"))
+            using(StreamWriter jsonWriter = new StreamWriter("C:\\Users\\Computing\\Documents\\GitHub\\Year3Project\\Year3Project\\Assets\\Resources\\Film.json"))
             {
                 jsonWriter.Write(JsonConvert.SerializeObject(outputFilm));
             }

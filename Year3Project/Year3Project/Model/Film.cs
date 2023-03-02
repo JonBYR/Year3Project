@@ -12,7 +12,7 @@ namespace Year3Project.Model
         public List<string> shotPaths { get; set; }
 
         public string genre { get; set; }
-        public string name { get; set; }
+        //public string name { get; set; }
 
         public Film()
         {
