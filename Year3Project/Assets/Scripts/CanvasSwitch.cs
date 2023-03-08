@@ -15,7 +15,7 @@ public class CanvasSwitch : MonoBehaviour
     void Update()
     {
         //bit buggy and unsure if this is actually needed. 
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (canvasOff)
             {
