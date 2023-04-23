@@ -26,19 +26,17 @@ public class GenreGeneratorWindow : EditorWindow
     {
         GUILayout.Label("Output", EditorStyles.boldLabel);
         inputGenre = EditorGUILayout.TextField("Genre", inputGenre);
-
         if (GUILayout.Button("Start Genre Generation"))
         {
             string[] filme = File.ReadAllLines(Path.Combine(Application.streamingAssetsPath, "Films.txt"));
             List<Film> myFilms = Film.FilmObjectsFromDatafile(filme);
             filmController = new FilmController(myFilms);
-
             filmController.GetOutputShotsFromGenre(inputGenre);
             filmController.GetMostCommonShots();
             filmController.MatchShotLibraryShotToFilmShot();
             filmController.SerializeFilm();
             AssetDatabase.Refresh();
-            EditorUtility.DisplayDialog("Genre Generator", $"Film Sequence of {inputGenre} has been generated.", "Ok");
+            EditorUtility.DisplayDialog("Genre Generator", $"Film Sequence of {char.ToUpper(inputGenre[0]) + inputGenre.Substring(1).ToLower()} has been generated.", "Ok");
         }
     }
 }

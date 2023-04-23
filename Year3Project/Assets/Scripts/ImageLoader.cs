@@ -47,7 +47,7 @@ public class ImageLoader : MonoBehaviour
         actorRotation = actor.transform.rotation;
         //json tutorial from here https://forum.unity.com/threads/how-to-read-json-file.401306/
         film = JsonUtility.FromJson<Films>(jsonFile.text); //parse in the film object
-        genreText.text = film.genre; //Display the film genre
+        genreText.text = (char.ToUpper(film.genre[0]) + film.genre.Substring(1).ToLower()); //Display the film genre
         shotText.text = film.shots[0];
         stillText.text = (index + 1).ToString();
         filmSprite = Resources.Load<Sprite>(film.shotPaths[0]);

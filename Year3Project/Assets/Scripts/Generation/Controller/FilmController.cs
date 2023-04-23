@@ -39,7 +39,7 @@ namespace Year3Project.Controller
 
             foreach (Film film in films)
             {
-                if (film.genre == genre)
+                if (film.genre.ToLower() == genre.ToLower())
                 {
                     matchingFilms.Add(film);
                 }
