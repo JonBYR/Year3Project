@@ -13,7 +13,7 @@ namespace Year3Project.Controller
         List<Film> films;
         List<Film> matchedFilms;
         Film outputFilm;
-
+        Random rnd = new Random();
 
         // Make new film reference if we don't have one.
         public FilmController()
@@ -79,8 +79,11 @@ namespace Year3Project.Controller
                     else currentShots.Add(matchedFilms[j].shots[i]);
                 }
                 //ShotStatistics stats = new ShotStatistics(i, currentShots);
-                var common = currentShots.GroupBy(item => item).OrderByDescending(group => group.Count()).Select(group => group.Key).First(); //https://stackoverflow.com/questions/355945/find-the-most-occurring-number-in-a-listint
-                outputFilm.shots.Add(common);
+                var common = currentShots.GroupBy(item => item).GroupBy(group => group.Count()).OrderByDescending(group => group.Key).First().Select(group => group.Key).ToArray(); //https://stackoverflow.com/questions/355945/find-the-most-occurring-number-in-a-listint
+                int randomMax = common.Count();
+                string com = common[rnd.Next(0, randomMax)];
+                //https://stackoverflow.com/questions/69569355/i-want-to-get-most-frequent-values-using-linq
+                outputFilm.shots.Add(com);
                 //stats.shotsBreakdown();
             }
         }
