@@ -20,6 +20,7 @@ public class Films
 }
 public class ImageLoader : MonoBehaviour
 {
+    
     public Image image;
     public TMP_Text toggleText;
     private bool toggle = false;
@@ -28,6 +29,7 @@ public class ImageLoader : MonoBehaviour
     public TextAsset jsonFile;
     public TMP_Text errorText;
     public TMP_Text stillText;
+    public GameObject panel;
     Sprite filmSprite;
     int index;
     int maxLength;
@@ -66,6 +68,18 @@ public class ImageLoader : MonoBehaviour
             Forward();
         }
         else if (Input.GetKeyDown("left")) Back();
+        if (Input.GetKeyDown(KeyCode.I)) ToggleInfo();
+        
+        if (shotText.text == "Full") toggleText.text = "A full shot is where you want a whole subjects body in frame";
+        else if (shotText.text == "Medium Full") toggleText.text = "A medium full shot contains a subject from head to around knee height";
+        else if (shotText.text == "Medium") toggleText.text = "A medium shot films a subject from torso up to head";
+        else if (shotText.text == "Medium Close Up") toggleText.text = "A medium close up shot films a subject from shoulder length to their head";
+        else if (shotText.text == "Close Up") toggleText.text = "A close up shot would film a subjects face or a specific part of the body";
+        else if (shotText.text == "Extreme Close Up") toggleText.text = "An extreme close up shot would film a very specific area of the body, such as the eyes";
+        else if (shotText.text == "Establishing") toggleText.text = "An establishing shot would establish the location of the scene";
+        else if (shotText.text == "Master") toggleText.text = "A master shot would clarify what characters are in the scene and where they are in relation to each other";
+        else if (shotText.text == "Wide") toggleText.text = "A wide shot positions characters far from the camera to represent their relationship to the enviornment";
+        else if (shotText.text == "Insert") toggleText.text = "An insert shot films a specific object";
     }
     public void Forward()
     {
@@ -118,6 +132,7 @@ public class ImageLoader : MonoBehaviour
         Debug.Log("And this is called");
         cam.cameraPos = startPos;
         Camera.main.fieldOfView = view;
+        Camera.main.transform.eulerAngles = new Vector3(0, 0, 0);
         actor.transform.position = actorPosition;
         actor.transform.rotation = actorRotation;
         foreach(GameObject act in secondaryActors)
@@ -186,7 +201,15 @@ public class ImageLoader : MonoBehaviour
     public void ToggleInfo()
     {
         toggle = !toggle;
-        if (toggle == true) toggleText.gameObject.SetActive(true);
-        else if (toggle == false) toggleText.gameObject.SetActive(false);
+        if (toggle == true)
+        {
+            panel.gameObject.SetActive(true);
+            toggleText.gameObject.SetActive(true);
+        }
+        else if (toggle == false) 
+        { 
+            toggleText.gameObject.SetActive(false);
+            panel.gameObject.SetActive(false);
+        }
     }
 }

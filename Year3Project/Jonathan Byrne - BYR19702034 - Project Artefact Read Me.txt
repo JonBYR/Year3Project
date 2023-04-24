@@ -9,3 +9,4 @@ Use Tools/Genre Generation and type in either Action, Comedy, Thriller or Wester
 Press the play arrow to see the generated film shot list, using the arrow buttons to flip through each shot, or use the left and right arrow keys on your keyboard
 Use WASD to move the camera and the mouse scroll wheel to zoom the camera in and out. Hold the left mouse button and drag the mouse to rotate the camera. Try and experiment with the types of shots the camera can make!
 Use F to toggle the image and text on/off
+Use I to get information on each shot

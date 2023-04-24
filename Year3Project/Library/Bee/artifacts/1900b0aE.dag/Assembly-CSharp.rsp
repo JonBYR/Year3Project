@@ -361,6 +361,7 @@
 "Assets/Scripts/Generation/GenreGeneratorWindow.cs"
 "Assets/Scripts/Generation/Model/Film.cs"
 "Assets/Scripts/ImageLoader.cs"
+"Assets/Scripts/ScreenShotSaver.cs"
 -langversion:9.0
 
 /deterministic
