@@ -21,6 +21,8 @@ public class Films
 public class ImageLoader : MonoBehaviour
 {
     public Image image;
+    public TMP_Text toggleText;
+    private bool toggle = false;
     public TMP_Text shotText;
     public TMP_Text genreText;
     public TextAsset jsonFile;
@@ -56,6 +58,14 @@ public class ImageLoader : MonoBehaviour
         maxLength = film.shotPaths.Length;
         errorText.enabled = false;
         shotLoader();
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown("right"))
+        {
+            Forward();
+        }
+        else if (Input.GetKeyDown("left")) Back();
     }
     public void Forward()
     {
@@ -172,5 +182,11 @@ public class ImageLoader : MonoBehaviour
             cam.cameraPos = new Vector3(3.84f, 0.22f, -10);
             Camera.main.fieldOfView = 7f;
         }
+    }
+    public void ToggleInfo()
+    {
+        toggle = !toggle;
+        if (toggle == true) toggleText.gameObject.SetActive(true);
+        else if (toggle == false) toggleText.gameObject.SetActive(false);
     }
 }
