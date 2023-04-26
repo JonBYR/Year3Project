@@ -50,7 +50,6 @@ namespace Year3Project.Controller
         //This will get the most common shots for the specific genre the user specifies
         public void GetMostCommonShots()
         {
-            
             int smallestSize = 100000;
             List<int> shotListSizes = new List<int>();
             for(int i = 0; i < matchedFilms.Count; i++)
