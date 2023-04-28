@@ -51,6 +51,7 @@ namespace Year3Project.Controller
         public void GetMostCommonShots()
         {
             int smallestSize = 100000;
+            /*
             List<int> shotListSizes = new List<int>();
             for(int i = 0; i < matchedFilms.Count; i++)
             {
@@ -58,7 +59,7 @@ namespace Year3Project.Controller
             }
             shotListSizes.Sort(); //sorts in ascending order
             smallestSize = shotListSizes[shotListSizes.Count - 2]; //allows for comparisons with at most two films
-            /*
+            */
             for (int i = 0; i < matchedFilms.Count; i++)
             {
                 if (matchedFilms[i].shots.Count < smallestSize)
@@ -66,7 +67,7 @@ namespace Year3Project.Controller
                     smallestSize = matchedFilms[i].shots.Count;
                 }
             }
-            */
+            
             for (int i = 0; i < smallestSize; i++)
             {
                 List<string> currentShots = new List<string>();
@@ -74,8 +75,8 @@ namespace Year3Project.Controller
                 //for each position, store a list of all the shots at this position
                 for (int j = 0; j < matchedFilms.Count; j++)
                 {
-                    if (i >= matchedFilms[j].shots.Count) continue; //if we find a list that is smaller than what i currrently is then it will not be used
-                    else currentShots.Add(matchedFilms[j].shots[i]);
+                    //if (i >= matchedFilms[j].shots.Count) continue; //if we find a list that is smaller than what i currrently is then it will not be used
+                    currentShots.Add(matchedFilms[j].shots[i]);
                 }
                 //ShotStatistics stats = new ShotStatistics(i, currentShots);
                 var common = currentShots.GroupBy(item => item).GroupBy(group => group.Count()).OrderByDescending(group => group.Key).First().Select(group => group.Key).ToArray(); //https://stackoverflow.com/questions/355945/find-the-most-occurring-number-in-a-listint

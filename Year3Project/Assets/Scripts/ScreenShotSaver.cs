@@ -16,6 +16,7 @@ public class ScreenShotSaver : MonoBehaviour
             numberOfScreenshots++;
             string screenshotPng = screenshotName + numberOfScreenshots.ToString() + ".png";
             ScreenCapture.CaptureScreenshot(Path.Combine("ExampleScreenshots", screenshotPng));
+            Debug.Log("Screenshot Taken");
         }
     }
 }
