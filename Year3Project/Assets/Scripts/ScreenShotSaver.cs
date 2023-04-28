@@ -7,7 +7,14 @@ public class ScreenShotSaver : MonoBehaviour
 {
     int numberOfScreenshots = 0;
     string screenshotName = "FilmScreenshot";
-
+    void Start()
+    {
+        string[] existingScreenshots = Directory.GetFiles("ExampleScreenshots");
+        foreach (string e in existingScreenshots)
+        {
+            File.Delete(e); //https://www.csharp-examples.net/delete-all-files/
+        }
+    }
     // Update is called once per frame
     void Update()
     {
